@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <title>H-CHAT</title>
+</head>
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <h1 class="chat-title" style="text-align: center;"> H-Chat </h1>
+      <a href="index.html" class="btn leave-btn">Leave</a>
+    </header>
+    <main class="chat-main">
+      <div class="chat-sidebar">
+        <h3> Channel </h3>
+        <h2 id="channel-name"></h2>
+        <h3> Users</h3>
+        <ul id="users"></ul>
+      </div>
+      <div class="chat-messages"></div>
+    </main>
+    <div class="chat-form-container">
+      <form id="chat-form">
+        <input
+          id="msg"
+          type="text"
+          placeholder="Enter Message Here"
+          required
+          autocomplete="off"
+          autofocus
+        />
+        <button class="btn btn-light send-btn" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.6/qs.min.js" integrity="sha512-3TmPrquYLaAsUmZKXRARTDC5siWhLAdBVqNo4dWpDABBtLU62AaoTaQJEvjxjExcZYurO6i1dnK85k8pPIBlRg==" crossorigin="anonymous"></script>
+  <script src='/socket.io/socket.io.js'></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
